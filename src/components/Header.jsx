@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full flex justify-between p-5 md:pl-10 pr-10 ${
+      className={`w-full flex justify-between p-5 md:pl-10 md:pr-10 ${
         theme === "light"
           ? "bg-white-(dark-mode-text)"
           : "bg-dark-blue-(dark-mode-elements)"

@@ -11,9 +11,9 @@ const Search = () => {
   };
 
   return (
-    <div className="w-[95%] md:flex justify-between">
+    <div className="py-1 w-[95%] pr-1 md:flex md:justify-between ">
       <form
-        className={`py-2 rounded-md md:w-1/2 my-[2rem] ${
+        className={`my-[2rem] rounded-md md:my-[2rem] ${
           theme === "light" ? "bg-[white]" : "bg-dark-blue-(dark-mode-elements)"
         }`}
       >
@@ -30,7 +30,7 @@ const Search = () => {
               theme === "light"
                 ? "bg-white text-very-dark-blue-(light-mode-text)"
                 : "bg-dark-blue-(dark-mode-elements) text-white-(dark-mode-text)"
-            } w-[30rem] h-[2.5rem]`}
+            } w-[20rem] h-[2.5rem]`}
             type="search"
             placeholder="Search for a country..."
           />

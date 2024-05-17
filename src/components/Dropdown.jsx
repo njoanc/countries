@@ -15,14 +15,14 @@ const Dropdown = ({ options, onSelect }) => {
   };
 
   return (
-    <div className="relative inline-block text-left  rounded-md mx-1 md:mt-[2rem]">
+    <div>
       <button
         type="button"
         className={`${
           theme === "light"
             ? "bg-very-light-gray-(light-mode-background) text-very-dark-blue-(light-mode-text)"
             : "bg-dark-blue-(dark-mode-elements)  text-white-(dark-mode-text)"
-        } my-1  inline-flex justify-center w-full rounded-md px-2 py-4 font-medium hover:bg-gray-50 focus:outline-none`}
+        } my-1  inline-flex justify-center rounded-md px-2 py-3 font-medium hover:bg-gray-50 focus:outline-none md:my-9`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedOption || "Filter by Region"}{" "}
@@ -53,7 +53,7 @@ const Dropdown = ({ options, onSelect }) => {
             {options.map((option) => (
               <button
                 key={option}
-                className="block px-4 py-2  w-full text-left"
+                className="block px-4 py-3  w-full text-left"
                 onClick={() => handleOptionClick(option)}
               >
                 {option}
