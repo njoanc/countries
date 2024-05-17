@@ -13,7 +13,7 @@ const Search = () => {
   return (
     <div className="w-[95%] md:flex justify-between">
       <form
-        className={`py-2 my-5 rounded-md md:w-1/2 ${
+        className={`py-2 rounded-md md:w-1/2 my-[2rem] ${
           theme === "light" ? "bg-[white]" : "bg-dark-blue-(dark-mode-elements)"
         }`}
       >

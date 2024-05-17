@@ -15,7 +15,7 @@ const Dropdown = ({ options, onSelect }) => {
   };
 
   return (
-    <div className="relative inline-block text-left mt-[0.05rem] rounded-md mx-1">
+    <div className="relative inline-block text-left  rounded-md mx-1 md:mt-[2rem]">
       <button
         type="button"
         className={`${
