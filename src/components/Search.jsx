@@ -11,9 +11,9 @@ const Search = () => {
   };
 
   return (
-    <div className="py-1 w-[95%] pr-1 md:flex md:justify-between ">
+    <div className="w-[95%] pr-1 md:flex md:justify-between ">
       <form
-        className={`my-[2rem] rounded-md md:my-[2rem] ${
+        className={`my-[2rem] rounded-md md:my-[2.5rem] ${
           theme === "light" ? "bg-[white]" : "bg-dark-blue-(dark-mode-elements)"
         }`}
       >
