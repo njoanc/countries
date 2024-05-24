@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { ThemeContext } from "../context/Themecontext";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Dropdown = ({ options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,12 +22,12 @@ const Dropdown = ({ options, onSelect }) => {
           theme === "light"
             ? "bg-very-light-gray-(light-mode-background) text-very-dark-blue-(light-mode-text)"
             : "bg-dark-blue-(dark-mode-elements)  text-white-(dark-mode-text)"
-        } my-1  inline-flex justify-center rounded-md px-2 py-3 font-medium hover:bg-gray-50 focus:outline-none md:my-9`}
+        } my-1 text-sm mr-30 inline-flex justify-center rounded-md pl-5 pr-10 py-3 font-medium hover:bg-gray-50 focus:outline-none md:my-3`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {selectedOption || "Filter by Region"}{" "}
         <svg
-          className="-mr-1 ml-2 h-5 w-5"
+          className="-mr-5 ml-10 h-5 w-5 pl-2"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -47,13 +47,13 @@ const Dropdown = ({ options, onSelect }) => {
             theme === "light"
               ? "bg-very-light-gray-(light-mode-background)  text-very-dark-blue-(light-mode-text)"
               : "bg-dark-blue-(dark-mode-elements)  text-white-(dark-mode-text)"
-          } origin-top-right absolute mt-2 w-40 rounded-md`}
+          } origin-top-right absolute mt-2 w-40 rounded-md pl-2 pr-[12rem]`}
         >
-          <div className="py-1">
+          <div className="py-1 text-sm">
             {options.map((option) => (
               <button
                 key={option}
-                className="block px-4 py-3  w-full text-left"
+                className="block px-4 py-1  w-full text-left"
                 onClick={() => handleOptionClick(option)}
               >
                 {option}

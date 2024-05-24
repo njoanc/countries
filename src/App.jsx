@@ -1,10 +1,18 @@
-import { useContext } from "react";
-import { ThemeContext } from "./context/Themecontext";
+import { useContext, useState } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 import Header from "./components/Header";
-import Search from "./components/Search";
+import SearchBar from "./components/SearchBar";
+import ResultsComponent from "./components/ResultsComponent";
+import CountryDetail from "./components/CountryDetail";
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+
+  const handleCountryClick = (country) => {
+    setSelectedCountry(country);
+  };
+
   return (
     <div
       className={` ${
@@ -14,7 +22,12 @@ const App = () => {
       } w-full md:w-[100%] flex flex-col justify-center items-center`}
     >
       <Header />
-      <Search />
+      <SearchBar />
+      {selectedCountry ? (
+        <CountryDetail country={selectedCountry} />
+      ) : (
+        <ResultsComponent onCountryClick={handleCountryClick} />
+      )}
     </div>
   );
 };
