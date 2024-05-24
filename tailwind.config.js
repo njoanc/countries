@@ -11,9 +11,15 @@ export default {
       "white-(dark-mode-text)": "hsl(0, 0%, 100%)",
       "light-mode-elements": "hsl(0, 0%, 100%)",
     },
-    extend: {},
-    fontFamily: {
-      specemono: ["Nunito Sans", "monospace"],
+    extend: {
+      fontFamily: {
+        sans: ["Nunito Sans", "sans-serif"],
+      },
+      fontWeight: {
+        light: 300,
+        semibold: 600,
+        extrabold: 800,
+      },
     },
   },
   plugins: [],
