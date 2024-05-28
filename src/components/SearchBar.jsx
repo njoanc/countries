@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { CiSearch } from "react-icons/ci";
-import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import Dropdown from "./Dropdown";
 import { CountryContext } from "../context/CountryContext";
