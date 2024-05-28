@@ -5,15 +5,16 @@ import { ThemeContext } from "../context/ThemeContext";
 import Dropdown from "./Dropdown";
 import { CountryContext } from "../context/CountryContext";
 
-const options = ["Africa", "America", "Asia", "Europe", "Oceania"];
+const options = ["Africa", "America", "Asia", "Europe", "Oceania", "All"];
 
-const SearchBar = () => {
+const SearchBar = ({ setShowResults }) => {
   const { theme } = useContext(ThemeContext);
   const { searchCountry } = useContext(CountryContext);
   const [searchData, setSearchData] = useState("");
 
   const handleInput = (e) => {
     setSearchData(e.target.value);
+    setShowResults(true);
   };
 
   const handleSubmit = (e) => {
