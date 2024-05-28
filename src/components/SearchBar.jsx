@@ -5,11 +5,11 @@ import { ThemeContext } from "../context/ThemeContext";
 import Dropdown from "./Dropdown";
 import { CountryContext } from "../context/CountryContext";
 
-const options = ["Africa", "America", "Asia", "Europe", "Oceania", "All"];
+const options = ["Africa", "Americas", "Asia", "Europe", "Oceania", "All"];
 
 const SearchBar = ({ setShowResults }) => {
   const { theme } = useContext(ThemeContext);
-  const { searchCountry } = useContext(CountryContext);
+  const { searchCountry, filterCountriesbyRegion } = useContext(CountryContext);
   const [searchData, setSearchData] = useState("");
 
   const handleInput = (e) => {
@@ -26,7 +26,11 @@ const SearchBar = ({ setShowResults }) => {
     }
   };
   const handleSelect = (option) => {
-    console.log("Filter by Region:", option);
+    if (option === "All") {
+      setShowResults(true);
+    } else {
+      filterCountriesbyRegion(option);
+    }
   };
 
   return (

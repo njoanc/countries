@@ -27,12 +27,24 @@ const CountryProvider = ({ children }) => {
     }
   };
 
+  const filterCountriesbyRegion = async (region) => {
+    try {
+      const response = await axios.get(`${url}/region/${region}`);
+      setCountryData(response.data);
+      setError(null);
+    } catch (err) {
+      setError(`Failed to fetch countries in ${region}`);
+    }
+  };
+
   useEffect(() => {
     fetchAllCountries();
   }, []);
 
   return (
-    <CountryContext.Provider value={{ countryData, error, searchCountry }}>
+    <CountryContext.Provider
+      value={{ countryData, error, searchCountry, filterCountriesbyRegion }}
+    >
       {children}
     </CountryContext.Provider>
   );
