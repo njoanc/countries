@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import ResultsComponent from "./components/ResultsComponent";
 import CountryDetail from "./components/CountryDetail";
+import ThemeProvider from "./context/ThemeContext.jsx";
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
